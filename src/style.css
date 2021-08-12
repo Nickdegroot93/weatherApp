@@ -1,0 +1,255 @@
+/* FULL RESET */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***** Main Components *****/
+
+:root {
+	font-size: 16px;
+	--color-primary-light: #51c4d3;
+	--color-primary-dark: #126e82;
+
+	--color-dark-1: #0b1a1f;
+	--color-dark-2: #10242b;
+	--color-light-1: #d8e3e7;
+}
+
+body {
+	padding-top: 3rem;
+	line-height: 1;
+	font-family: Yantramanav;
+	font-weight: 100;
+	color: var(--color-light-1);
+	background: var(--color-dark-1);
+}
+
+button {
+	background-color: var(--color-primary-light);
+	border: none;
+	color: var(--color-light-1);
+	padding: 0.1rem 0.2rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+/***** Header *****/
+
+.main-logo {
+	width: 4rem;
+	margin-right: 1rem;
+}
+
+.header__title {
+	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	color: var(--color-light-1);
+}
+
+.header__title-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 200;
+	font-size: 3.5rem;
+	margin-bottom: 0.2rem;
+	letter-spacing: 0rem;
+}
+
+.header__title-secondary {
+	font-weight: 100;
+	font-size: 1rem;
+}
+
+/***** Search box *****/
+
+.search__box {
+	margin: 2rem 0rem 5rem 0;
+	display: flex;
+	justify-content: center;
+}
+
+.search__field {
+	width: 50%;
+	height: 1.5rem;
+	border: none;
+}
+
+.search__field:focus {
+	outline: none;
+}
+.search__btn {
+	cursor: pointer;
+	padding: 0rem 0.5rem;
+	display: flex;
+	align-items: center;
+}
+
+/***** Weather Report *****/
+
+.report {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+}
+
+.report-city {
+	position: relative;
+	font-size: 2rem;
+	font-weight: 300;
+	margin-bottom: 1.5rem;
+}
+
+.report-city::after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	background-color: var(--color-primary-light);
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -0.5rem;
+}
+
+.report-info {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.report-degrees {
+	font-size: 5rem;
+	padding: 1rem;
+}
+
+.report-details {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.report-detail {
+	padding: 0.2rem;
+}
