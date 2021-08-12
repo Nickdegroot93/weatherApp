@@ -134,12 +134,17 @@ table {
 }
 
 body {
-	padding-top: 3rem;
+	padding: 3rem 0 3rem 0;
 	line-height: 1;
 	font-family: Yantramanav;
 	font-weight: 100;
 	color: var(--color-light-1);
 	background: var(--color-dark-1);
+}
+
+main {
+	padding: 2rem;
+	background: var(--color-dark-2);
 }
 
 button {
@@ -150,6 +155,11 @@ button {
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
+	transition: all 0.5s ease;
+}
+
+button:hover {
+	background-color: var(--color-primary-dark);
 }
 
 /***** Header *****/
@@ -160,11 +170,11 @@ button {
 }
 
 .header__title {
-	margin: 1rem;
+	margin: 1rem 0 3rem 0;
 	display: flex;
 	flex-direction: column;
-	text-align: center;
 	color: var(--color-light-1);
+	text-align: center;
 }
 
 .header__title-main {
@@ -185,7 +195,6 @@ button {
 /***** Search box *****/
 
 .search__box {
-	margin: 2rem 0rem 5rem 0;
 	display: flex;
 	justify-content: center;
 }
@@ -212,14 +221,13 @@ button {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 2rem;
 }
 
 .report-city {
 	position: relative;
 	font-size: 2rem;
 	font-weight: 300;
-	margin-bottom: 1.5rem;
+	margin: 1.5rem 0 1.5rem 0;
 }
 
 .report-city::after {
@@ -252,4 +260,25 @@ button {
 
 .report-detail {
 	padding: 0.2rem;
+}
+
+/***** Copyright *****/
+
+.error {
+	text-align: center;
+	line-height: 1.5rem;
+	margin-top: 2rem;
+	font-weight: 200;
+}
+
+.error-logo {
+	height: 3rem;
+}
+
+/***** Copyright *****/
+
+.copyright {
+	text-align: center;
+	color: var(--color-primary-dark);
+	margin-top: 3rem;
 }

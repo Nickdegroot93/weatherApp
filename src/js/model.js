@@ -2,6 +2,7 @@ import { WEATHER_API } from './config';
 
 export const state = {
 	weatherReport: {},
+	errorMessage: '',
 };
 
 export const getWeatherData = async function (city) {
@@ -11,8 +12,10 @@ export const getWeatherData = async function (city) {
 			`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${WEATHER_API}`
 		);
 		const data = await response.json();
-		console.log(data);
 		// Store report in state
+		state.errorMessage = data.message
+			? data.message.charAt(0).toUpperCase() + data.message.slice(1)
+			: '';
 		state.weatherReport = {
 			city: data.name,
 			country: data.sys.country,
